@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="AudioDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AudioDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="ButtonWAV" Click="ButtonWAV_Click" Content="Play WAV" Margin="20"/>
+            <Button x:Name="ButtonWMA" Click="ButtonWMA_Click" Content="Play WMA" Margin="20" RelativePanel.RightOf="ButtonWAV" />
+            <Button x:Name="ButtonMP3" Click="ButtonMP3_Click" Content="Play MP3" Margin="20" RelativePanel.RightOf="ButtonWMA" />
+            <Slider x:Name="SliderWAV" Orientation="Vertical" Height="100" Minimum="0" Maximum="100" RelativePanel.Below="ButtonWAV" RelativePanel.AlignHorizontalCenterWith="ButtonWAV" Value="20" />
+            <Slider x:Name="SliderWMA" Orientation="Vertical" Height="100" Minimum="0" Maximum="100" RelativePanel.Below="ButtonWAV" RelativePanel.AlignHorizontalCenterWith="ButtonWMA" Value="100" />
+            <Slider x:Name="SliderMP3" Orientation="Vertical" Height="100" Minimum="0" Maximum="100" RelativePanel.Below="ButtonWAV" RelativePanel.AlignHorizontalCenterWith="ButtonMP3" Value="100" />
+        </RelativePanel>
+    </Grid>
+</Page>
